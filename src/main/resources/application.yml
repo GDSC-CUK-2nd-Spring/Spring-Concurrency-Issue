@@ -4,6 +4,9 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 40  # Named lock에서 REQUIRES_NEW 사용으로 인해 커넥션의 소모가 증가하여 올바르게 동작하지 않음. 커넥션 풀 사이즈 명시
+
   h2:
     console:
       enabled: true
