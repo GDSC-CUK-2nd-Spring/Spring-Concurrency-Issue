@@ -8,11 +8,11 @@ import spring.concurrencyissue.service.StockService;
 
 @Component
 @RequiredArgsConstructor
-public class NamedLockStockFacade {
+public class NamedLockStockFacade{
     private final LockRepository lockRepository;
     private final StockService stockService;
     @Transactional
-    public void decrease(Long id, Long quantity) {
+    public void decrease(Long id, Long quantity) throws InterruptedException {
         try {
             lockRepository.getLock(id.toString()); // 네임드 락 얻어오기
             //stockService.decreaseWithTx(id, quantity); // Requires_new로 하지 않으면 무한루프
