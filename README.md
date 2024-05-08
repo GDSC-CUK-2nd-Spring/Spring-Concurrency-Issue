@@ -11,6 +11,6 @@ https://github.com/GDSC-CUK-2nd-Spring/Spring-Concurrency-Issue/wiki
   - [x] 비관적락 (Pessimisitc Lock)
   - [x] 낙관적락 (Optimistic Lock)
   - [x] 네임드 락 (Named Lock)
-- [ ] Redis
-  - [ ] Lettuce
-  - [ ] Redisson
+- [x] Redis
+  - [x] Lettuce
+  - [x] Redisson
